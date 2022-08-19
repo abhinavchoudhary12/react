@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import App1 from './/components/App1.jsx';
+import Test from './/components/Test.jsx';
+import Test2 from './/components/Test2.jsx';
+import Counter from ".//components/Counter.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  state = {  } 
+  render() { 
+    
+    return (
+      <>
+      <App1 name={"Abhinav"} />
+      <Test/>
+     <Test2/>
+     <Counter/>
+       </>
+    );
+    }
+    
+  }
 
+ 
 export default App;
