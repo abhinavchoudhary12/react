@@ -18,27 +18,34 @@ class Counter extends Component {
         return color;
     }
     condition1=()=>{
-        let color=this.state.count<0?"btn btn-danger":"btn btn-primary";
+        let color=this.state.count<0?"btn btn-danger mx-1":"btn btn-primary mx-1";
         return color;
     }
     countCondition=()=>{
-        let color=this.state.count>0?"btn btn-success":"btn btn-warning";
+        let color=this.state.count>0?"btn btn-success mx-1":"btn btn-warning mx-1";
         return color;
     }
+    reset=()=>{
+        this.setState({count:0})
+    }
+  
     render() { 
         return (
             <>
-            <h1 style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"}} >This is counter </h1>
+            
             <button className={this.condition()} onClick={this.increment}>Increment</button>
             <span className={this.countCondition()}>{this.state.count}</span>
             <button className={this.condition1()} onClick={this.decrement}>Decrement</button>
+            <button className="btn btn-primary mx-4" onClick={this.reset}>reset</button>
+            <br/>
+            <br/>            
+                
+         
             </>
         );
     }
     
 }
  
+
 export default Counter;

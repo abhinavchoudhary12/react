@@ -12,10 +12,7 @@ function App1(props) {
     }
     return (
       <>
-        <h1 style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"}}>Hello World!</h1>
+        <h1>Hello World!</h1>
         <p>i am {name} and this is an jsx expression</p>
         <button className='btn btn-success' onClick={Call}>click me</button>
         <h3>i am just printing on console click me and check console</h3>
